@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.Instant;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -13,6 +13,7 @@ import java.time.Instant;
 public class Vehicle {
     @JsonProperty("_id")
     private int id;
+    @JsonProperty("make")
     private String mark;
     private String model;
     @JsonProperty("year_model")
@@ -20,5 +21,5 @@ public class Vehicle {
     private double price;
     private boolean licensed;
     @JsonProperty("date_added")
-    private Instant dateAdded;
+    private Date dateAdded;
 }
